@@ -4,7 +4,6 @@ Version: 4.9.2
 Release: 1
 License: BSD with advertising
 URL: https://github.com/sailfishos/tcpdump
-Group: Applications/Internet
 Requires(pre): shadow-utils
 BuildRequires: openssl-devel
 BuildRequires: libpcap-devel
