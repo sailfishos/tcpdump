@@ -3,8 +3,7 @@ Name: tcpdump
 Version: 4.9.2
 Release: 1
 License: BSD with advertising
-URL: http://www.tcpdump.org
-Group: Applications/Internet
+URL: https://github.com/sailfishos/tcpdump
 Requires(pre): shadow-utils
 BuildRequires: openssl-devel
 BuildRequires: libpcap-devel
