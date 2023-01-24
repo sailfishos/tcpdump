@@ -1,6 +1,6 @@
 Summary: A network traffic monitoring tool
 Name: tcpdump
-Version: 4.9.2
+Version: 4.99.3
 Release: 1
 License: BSD with advertising
 URL: https://github.com/sailfishos/tcpdump
@@ -21,7 +21,7 @@ the packet headers, or just the ones that match particular criteria.
 Install tcpdump if you need a program to monitor network traffic.
 
 %prep
-%setup -q -n %{name}-%{version}/%{name}
+%autosetup -n %{name}-%{version}/%{name}
 
 find . -name '*.c' -o -name '*.h' | xargs chmod 644
 
@@ -29,7 +29,7 @@ find . -name '*.c' -o -name '*.h' | xargs chmod 644
 export CFLAGS="$RPM_OPT_FLAGS $(getconf LFS_CFLAGS) -fno-strict-aliasing"
 
 %configure --with-crypto --with-user=tcpdump --without-smi
-make %{?_smp_mflags}
+%make_build
 
 %install
 mkdir -p ${RPM_BUILD_ROOT}%{_libdir}
@@ -45,5 +45,5 @@ exit 0
 
 %files
 %defattr(-,root,root)
-%doc LICENSE CHANGES CREDITS
+%license LICENSE
 %{_sbindir}/tcpdump
