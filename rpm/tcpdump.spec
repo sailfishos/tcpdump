@@ -1,6 +1,6 @@
 Summary: A network traffic monitoring tool
 Name: tcpdump
-Version: 4.99.3
+Version: 4.99.4
 Release: 1
 License: BSD with advertising
 URL: https://github.com/sailfishos/tcpdump
